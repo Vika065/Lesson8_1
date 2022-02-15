@@ -1,0 +1,462 @@
+@import "null.css";
+
+/* для заголовков Press Start 2P*/
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&family=Pacifico&family=Press+Start+2P&display=swap");
+
+/* для основного текста Neucha*/
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&family=Neucha&family=Pacifico&display=swap");
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	max-width: 900px;
+	margin: 50px auto;
+}
+/* -----------------------  */
+
+body {
+	background: url("../img/bill.png") 50% / 400px no-repeat,
+		radial-gradient(
+			circle,
+			rgba(238, 174, 202, 1) 0%,
+			rgba(192, 181, 218, 1) 51%,
+			rgba(181, 182, 222, 1) 63%,
+			rgba(166, 184, 227, 1) 80%,
+			rgba(148, 187, 233, 1) 100%
+		);
+	font-family: "Neucha", sans-serif;
+	font-size: 25px;
+	color: rgb(29, 3, 44);
+	text-align: justify;
+	line-height: 1.3;
+	text-indent: 10px;
+}
+
+.title {
+	font-family: "Press Start 2P", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	text-shadow: 15px 10px 10px rgba(0, 0, 0, 0.589);
+}
+h1 {
+	margin-bottom: 30px;
+	color: rgba(190, 22, 190, 0.678);
+	font-size: 55px;
+}
+h2 {
+	margin: 25px 0;
+	font-size: 45px;
+	color: rgba(162, 22, 190, 0.678);
+}
+
+/*-- -------------меню------------- --*/
+
+.item-list {
+	text-transform: uppercase;
+	display: inline-block;
+	color: blueviolet;
+	margin-right: 10px;
+	font-weight: 700;
+	background-color: rgba(240, 248, 255, 0.336);
+	padding: 15px 0;
+	border-radius: 15px;
+	min-width: 150px;
+	font-size: 15px;
+}
+
+.nav > *:last-child {
+	margin-right: 0;
+}
+
+.nav {
+	text-align: center;
+}
+
+.item-list:hover {
+	background-color: rgb(240, 248, 255);
+	text-decoration: underline;
+}
+.item-list:active {
+	background-color: rgba(255, 255, 255, 0.877);
+	box-shadow: 0 0px 0 0 rgb(99, 14, 116), inset 0 0px 5px 0 rgb(99, 14, 116);
+}
+.item-list:visited {
+	background-color: rgb(241, 191, 248);
+	color: gray;
+}
+
+.image-chapter1 {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: url("../img/candy.png") 50% / 300px no-repeat fixed, url("../img/sky.jpg");
+	margin: 50px auto 0;
+}
+
+/* первая кнока с вызовом окна */
+a.open {
+	font-family: "Press Start 2P", sans-serif;
+	width: 350px;
+	/* margin: 0 auto; */
+	display: block;
+	padding: 30px 0;
+	background-image: linear-gradient(
+		144deg,
+		rgba(131, 58, 180, 1) 0%,
+		rgba(224, 75, 226, 1) 50%,
+		rgba(255, 183, 252, 1) 100%
+	);
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	box-shadow: 2px 8px 0 0 rgb(162, 22, 190), inset 0 0px 10px 0 rgba(255, 255, 255, 0.171);
+	border-radius: 20px;
+	text-align: center;
+	margin: 20px auto 30px;
+}
+a.open:hover {
+	background-image: linear-gradient(
+		144deg,
+		rgba(88, 41, 120, 1) 0%,
+		rgba(166, 56, 167, 1) 50%,
+		rgba(182, 128, 180, 1) 100%
+	);
+	color: rgb(199, 199, 199);
+	box-shadow: 2px 5px 0 0 rgb(99, 14, 116);
+	margin: 23px auto 27px;
+}
+a.open:active {
+	box-shadow: 0 0px 0 0 rgb(99, 14, 116), inset 0 0px 5px 0 rgb(99, 14, 116);
+	margin: 28px auto 22px;
+}
+
+.title-chapter1 {
+	margin-bottom: 0;
+}
+
+/* окно по кнопке */
+.window {
+	visibility: hidden;
+	max-width: 400px;
+	max-height: 400px;
+	overflow: auto;
+	font-size: 20px;
+	color: rgb(89, 30, 145);
+	box-shadow: 15px 10px 20px black;
+	background: url("../img/pig1.png") center / 400px no-repeat,
+		linear-gradient(
+			356deg,
+			rgba(249, 83, 255, 0.555) 0%,
+			rgba(255, 158, 252, 0.562) 35%,
+			rgba(255, 221, 255, 0.562) 100%
+		);
+	border-radius: 30px;
+	padding: 20px;
+	margin: 0 auto;
+}
+.window:target {
+	visibility: visible;
+}
+
+a.close {
+	display: block;
+	text-transform: uppercase;
+	text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.445);
+	color: rgb(60, 24, 94);
+	font-size: 25px;
+	text-align: center;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+}
+a.close:hover {
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+}
+
+.title-window,
+.window p {
+	margin-bottom: 10px;
+}
+
+.window > *:last-child {
+	margin-bottom: 0;
+}
+
+.window p:first-of-type {
+	background-color: rgba(122, 122, 122, 0.623);
+}
+
+/*-- -------------табы------------- --*/
+.tab-chapter2-info p::first-letter {
+	font-family: "Press Start 2P", sans-serif;
+	font-size: 30px;
+	text-indent: 0px;
+	color: rgb(141, 20, 131);
+}
+
+.tab-chapter2-link {
+	max-width: 850px;
+	margin: 0 auto 5px;
+}
+
+.tab-chapter2-link a {
+	display: inline-block;
+	width: 130px;
+	margin: 0 3px 0px 0;
+	padding: 15px 0;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	text-align: center;
+}
+
+.tab-chapter2-link > a:nth-child(odd) {
+	background-color: rgb(217, 150, 250);
+}
+.tab-chapter2-link > a:nth-child(even) {
+	background-color: rgb(165, 3, 245);
+	color: rgb(255, 255, 255);
+}
+
+.tab-chapter2-link > a:hover:nth-child(odd) {
+	color: blueviolet;
+	text-decoration: underline;
+	background: rgba(171, 120, 194, 0.562);
+}
+.tab-chapter2-link > a:hover:nth-child(even) {
+	color: blueviolet;
+	text-decoration: underline;
+	background-color: rgba(129, 10, 189, 0.514);
+}
+
+.tab-chapter2-info p {
+	margin-bottom: 15px;
+}
+
+.tab-chapter2-info div:nth-child(odd) {
+	background: url("../img/stan.png") 100% 100% / 200px no-repeat, rgba(217, 150, 250, 0.493);
+}
+.tab-chapter2-info div:nth-child(even) {
+	background: url("../img/sus3.png") 0 100% / 150px no-repeat, rgba(164, 3, 245, 0.575);
+	color: rgb(255, 255, 255);
+}
+
+.tab-chapter2-info .paragraph > *:last-child {
+	margin-bottom: 0;
+}
+
+.tab-chapter2-info .paragraph {
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom: 10px double rgba(255, 255, 255, 0.164);
+	padding: 25px 40px;
+}
+
+.paragraph {
+	display: none;
+}
+
+.info-1:target,
+.info-2:target,
+.info-3:target,
+.info-4:target,
+.info-5:target,
+.info-6:target {
+	display: block;
+}
+
+/*-- -------------игра------------- --*/
+
+.img-game {
+	display: block;
+	margin: 0 auto;
+}
+
+/* ---блоки--- */
+.block1-game {
+	height: 40px;
+	width: 40px;
+	background-color: red;
+	margin-left: 425px;
+}
+.block2-game {
+	height: 150px;
+	width: 30px;
+	background-color: #fff;
+	visibility: hidden;
+	margin-left: 430px;
+}
+.block3-game {
+	height: 15px;
+	width: 460px;
+	background-color: #fff;
+	visibility: hidden;
+}
+.block4-game {
+	height: 60px;
+	width: 25px;
+	background-color: #fff;
+	visibility: hidden;
+}
+.block5-game {
+	height: 70px;
+	width: 15px;
+	margin-left: 20px;
+	background-color: #fff;
+	visibility: hidden;
+}
+.block6-game {
+	height: 10px;
+	width: 500px;
+	background-color: rgb(255, 0, 221);
+	margin-left: 20px;
+	visibility: hidden;
+}
+.block7-game {
+	height: 30px;
+	width: 18px;
+	margin-left: 502px;
+	background: red;
+	visibility: hidden;
+}
+.img-over {
+	display: block;
+	margin: 0 auto;
+	max-width: 700px;
+}
+.block8-game {
+	visibility: hidden;
+}
+
+.block1-game:hover + .block2-game {
+	visibility: visible;
+}
+.block2-game:hover {
+	visibility: visible;
+}
+.block2-game:hover + .block3-game {
+	visibility: visible;
+}
+.block3-game:hover {
+	visibility: visible;
+}
+.block3-game:hover + .block4-game {
+	visibility: visible;
+}
+.block4-game:hover {
+	visibility: visible;
+}
+.block4-game:hover + .block5-game {
+	visibility: visible;
+}
+.block5-game:hover {
+	visibility: visible;
+}
+.block5-game:hover + .block6-game {
+	visibility: visible;
+}
+.block6-game:hover {
+	visibility: visible;
+}
+.block6-game:hover + .block7-game {
+	visibility: visible;
+}
+.block7-game:hover {
+	visibility: visible;
+}
+.block7-game:hover + .block8-game {
+	visibility: visible;
+}
+.block8-game:hover {
+	visibility: visible;
+}
+
+/* ------------------------------------ */
+.chapter3 p::before {
+	content: "";
+	background: url("../img/pig2.png") 0 0 / 40px no-repeat;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+.p-chapter3::after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: rgb(119, 0, 255);
+}
+/* --------------------chapter 4--------------------------- */
+.chapter4 {
+	background: url("../img/mcgak1.png") 50% / 300px no-repeat;
+}
+.list4 {
+	margin-bottom: 20px;
+}
+.list-chapter4 > *:last-child {
+	margin-bottom: 0;
+}
+
+.list4:hover::first-line {
+	font-size: 27px;
+}
+
+.list4:hover {
+	background-color: rgba(255, 255, 255, 0.13);
+}
+
+.list-chapter4 li:nth-child(odd)::before {
+	content: "";
+	background: url("../img/mable.png") 0 4px / 35px no-repeat;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+}
+.list-chapter4 li:nth-child(odd):hover::before {
+	content: "";
+	background: url("../img/mable.png") 0 4px / 50px no-repeat;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+.list-chapter4 li:nth-child(even)::before {
+	content: "";
+	background: url("../img/gideon.png") 0 4px / 40px no-repeat;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+.list-chapter4 li:nth-child(even):hover::before {
+	content: "";
+	background: url("../img/gideon.png") 0 4px / 50px no-repeat;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+/* -------------------footer------------------------ */
+.link-footer {
+	display: block;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	background: url("../img/titan.jpg") 50% / 400px no-repeat;
+	margin: 100px auto 50px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	box-shadow: 3px 10px 0 0 rgb(11, 0, 53);
+}
+
+.link-footer:hover {
+	color: greenyellow;
+	box-shadow: 3px 5px 0 0 rgb(11, 0, 53);
+	margin-top: 105px;
+	margin-bottom: 45px;
+}
+
+.link-footer:active {
+	background: url("../img/titan2.jpg") 50% / 400px no-repeat;
+	box-shadow: 0 0px 0 0 rgb(2, 0, 7), inset 0 0px 20px 0 rgb(0, 0, 0);
+	color: red;
+	margin-top: 110px;
+	margin-bottom: 40px;
+}
